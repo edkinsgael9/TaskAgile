@@ -1,13 +1,20 @@
 package com.taskagile.domain.common.security;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
 public class PasswordEncryptorDelegator implements PasswordEncryptor {
 
-  @Override
-  public String encrypt(String rawPassword) {
-    // TODO implement this
-    return rawPassword;
-  }
+	private PasswordEncoder passwordEncoder;
+
+	public PasswordEncryptorDelegator(PasswordEncoder passwordEncoder) {
+		this.passwordEncoder = passwordEncoder;
+	}
+
+	@Override
+	public String encrypt(String rawPassword) {
+		// TODO implement this
+		return passwordEncoder.encode(rawPassword);
+	}
 }
