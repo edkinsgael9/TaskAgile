@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import registrationService from '@/services/registration'
+import registrationService from '@/services/registration/registration'
 import { required, minLength, maxLength, alphaNum, email } from 'vuelidate/lib/validators'
 import Logo from '@/components/Logo.vue'
 import PageFooter from '@/components/PageFooter.vue'

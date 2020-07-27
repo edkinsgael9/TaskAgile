@@ -3,7 +3,7 @@ import RegisterPage from '@/views/RegisterPage'
 import { mount, createLocalVue } from '@vue/test-utils'
 import VueRouter from 'vue-router'
 import Vuelidate from 'vuelidate'
-import registrationService from '@/services/registration'
+import registrationService from '@/services/registration/registration'
 
 // Adding Vue Router to the test so that  we can access vm.$router
 const localVue = createLocalVue()
@@ -11,7 +11,7 @@ localVue.use(VueRouter)
 localVue.use(Vuelidate)
 const router = new VueRouter()
 // Mock dependency registratioService
-jest.mock('@/services/registration')
+jest.mock('@/services/registration/registration')
 
 describe('RegisterPage.vue', () => {
   let wrapper

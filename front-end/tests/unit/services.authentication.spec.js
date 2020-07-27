@@ -1,5 +1,5 @@
 import moxios from 'moxios'
-import authenticationService from '@/services/authentication'
+import authenticationService from '@/services/authentication/authentication'
 
 describe('services/authentication', () => {
   beforeEach(() => {

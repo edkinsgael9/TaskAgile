@@ -2,7 +2,7 @@ import { mount, createLocalVue } from '@vue/test-utils'
 import Vuelidate from 'vuelidate'
 import VueRouter from 'vue-router'
 import LoginPage from '@/views/LoginPage'
-import authenticationService from '@/services/authentication'
+import authenticationService from '@/services/authentication/authentication'
 
 // Setup local Vue with Vuelidate
 const localVue = createLocalVue()
@@ -11,7 +11,7 @@ localVue.use(VueRouter)
 const router = new VueRouter()
 
 // Mock dependency registratioService
-jest.mock('@/services/authentication')
+jest.mock('@/services/authentication/authentication')
 
 let wrapper
 let fieldUsername
